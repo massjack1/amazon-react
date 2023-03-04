@@ -5,11 +5,13 @@ import '../styles/globals.css';
 
 const MyApp = ({ Component, pageProps }) => {
   return (
+  <HydrationProvider>
     <Provider store={store}>
       <Component {...pageProps} />
     </Provider>
+  </HydrationProvider>
     
   )
 }
 
-export default MyApp;
+export default MyApp
