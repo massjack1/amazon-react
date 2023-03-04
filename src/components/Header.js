@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import dynamic from "next/dynamic";
+
 import {
   MenuIcon,
   SearchIcon,
@@ -61,4 +63,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default dynamic (() => Promise.resolve(Header), {ssr: false})
