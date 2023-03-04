@@ -2,6 +2,8 @@ import Image from "next/image";
 import {useState} from "react";
 import {StarIcon} from "@heroicons/react/solid";
 import Currency from "react-currency-formatter";
+import dynamic from "next/dynamic";
+
 
 const MAX_RATING = 5;
 const MIN_RATING = 1;
@@ -41,4 +43,4 @@ function Product({ id, title, price, description, category, image }) {
   )
 }
 
-export default Product;
+export default dynamic (() => Promise.resolve(Product), {ssr: false})

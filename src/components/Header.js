@@ -4,6 +4,8 @@ import {
   SearchIcon,
   ShoppingCartIcon,
 } from "@heroicons/react/outline";
+import dynamic from "next/dynamic";
+
 
 function Header() {
   return (
@@ -61,4 +63,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default dynamic (() => Promise.resolve(Header), {ssr: false})
