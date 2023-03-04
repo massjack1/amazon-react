@@ -12,7 +12,7 @@ const MyApp = ({ Component, pageProps }) => {
     </Provider>
   </AuthProvider>
     
-  )
-}
+  );
+};
 
-export default MyApp
+export default MyApp;
