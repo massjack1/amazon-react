@@ -5,6 +5,7 @@ import {
   ShoppingCartIcon,
 } from "@heroicons/react/outline";
 import dynamic from "next/dynamic";
+import {signIn, signOut, useSession} from "next-auth/react";
 
 
 function Header() {
@@ -29,7 +30,7 @@ function Header() {
 
         {/* Right */}
         <div className='text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap'>
-          <div className='link'>
+          <div onClick={signIn} className='cursor-pointer link'>
               <p>Hello Mass Jack</p>
               <p className='font-extrabold md:text-sm'>Account & Lists</p>
           </div>
