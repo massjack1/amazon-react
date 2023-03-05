@@ -9,7 +9,8 @@ import {signIn, signOut, useSession} from "next-auth/react";
 
 
 function Header() {
-const [session] = useSession();
+  const { data: session, status } = useSession();
+
 
   return (
     <header sticky top-0 z-50>
